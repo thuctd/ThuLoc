@@ -1,15 +1,11 @@
 
 
 @ECHO OFF
-@For /F "tokens=2,3,4 delims=/ " %%A in ('Date /t') do @( 
-    Set Month=%%A
-    Set Day=%%B
-    Set Year=%%C
-)
-
-@echo DAY = %Day%
-@echo Month = %Month%
-@echo Year = %Year%
+@echo Started: %date% %time%
+.
+.
+.
+@echo Completed: %date% %time%
 
 
 call git config --global user.email "thucspc@gmail.com"
