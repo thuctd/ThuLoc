@@ -1,13 +1,6 @@
-
-@ECHO OFF
-@echo Started: %date% %time%
-
-
-call git config --global user.email "thucspc@gmail.com"
-call git config --global user.name "ThucTran"
+echo %date:~6,4%%date:~3,2%%date:~0,2%_%time%
 call git pull origin master
-call git add .
-call git commit -am %date%_%time%
-
+call git add *
+call git commit -m %date:~6,4%%date:~3,2%%date:~0,2%_%time%
 call git push origin master -f
 PAUSE
