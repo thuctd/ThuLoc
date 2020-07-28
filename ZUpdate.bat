@@ -1,6 +1,14 @@
-echo %date:~6,4%%date:~3,2%%date:~0,2%_%time%
+@ECHO OFF
+@echo Started: %date% %time%
+
+set /p commit=Enter Commit: 
+echo %commit%
+
+
 call git pull origin master
-call git add *
-call git commit -m %date:~6,4%%date:~3,2%%date:~0,2%_%time%
+call git add .
+
+
+call git commit -m %date%_%time%_%commit%
 call git push origin master -f
 PAUSE
