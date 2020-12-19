@@ -1,5 +1,6 @@
 *.tmp
 *.log
-*.zip
 *.rar
 *.7z
+.tmp.*
+~$*
